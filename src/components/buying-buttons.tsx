@@ -1,41 +1,35 @@
-interface Props {
-  handleChangeItem: (amount: number, discount: number) => void
-}
+import { ItemsContext } from '@/context/items-context'
+import { itemsArray } from '@/data/array-items'
+import { Item } from '@/types/interfaces'
+import { useContext } from 'react'
 
-const buttonArray = [
-  {
-    id: 1,
-    amount: 3,
-    discount: 0.15,
-    text: '3 unidades',
-  },
-  {
-    id: 2,
-    amount: 2,
-    discount: 0.12,
-    text: '2 unidades',
-  },
-  {
-    id: 3,
-    amount: 1,
-    discount: 0.1,
-    text: '1 unidad',
-  },
-]
+export default function BuyingButtons() {
+  const { selectedItem, handleChangeItem } = useContext(ItemsContext)
 
-export default function BuyingButtons({ handleChangeItem }: Props) {
+  console.log('selectedItem', selectedItem)
+
+  const isSelected = (item: Item) => {
+    return selectedItem.id === item.id
+  }
+
   return (
-    <div className='flex items-center gap-5'>
-      {buttonArray.map((item) => {
+    <div className='flex items-center justify-between gap-5 w-full'>
+      {itemsArray.map((item) => {
         return (
-          <button
-            className='bg-[#70AD47] w-[230px] text-xl font-bold flex flex-col items-center text-white p-2 transition-all duration-75 active:translate-y-2 hover:shadow-md hover:shadow-green-950'
-            key={item.id}
-            onClick={() => handleChangeItem(item.amount, item.discount)}
-          >
-            <span>{item.text}</span>
-            <span>{`${(item.discount * 100).toFixed(0)}%`} de descuento</span>
-          </button>
+          <div key={item.id}>
+            <button
+              className={`bg-white text-primaryGreen border-2  border-primaryGreen hover:bg-primaryGreen text-xl font-bold flex flex-col items-center hover:text-white p-2 transition-all duration-75 active:translate-y-1 hover:shadow-md hover:shadow-green-950 relative rounded-md`}
+              onClick={() => handleChangeItem(item.amount, item.discount)}
+            >
+              {item.bestOffer && (
+                <span className='absolute pointer-events-none -top-7 text-sm text-accentRed'>
+                  mejor oferta
+                </span>
+              )}
+              <span>{item.text}</span>
+              <span>{`${(item.discount * 100).toFixed(0)}%`} de descuento</span>
+            </button>
+          </div>
         )
       })}
     </div>
