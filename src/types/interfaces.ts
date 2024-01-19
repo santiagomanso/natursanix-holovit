@@ -5,4 +5,5 @@ export interface Item {
   text: string
   bestOffer?: boolean
   originalPrice: number
+  url: string
 }
