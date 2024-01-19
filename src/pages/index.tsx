@@ -9,6 +9,7 @@ import Container from '@/components/container'
 import { MoreInfo } from '@/components/more-info'
 import GridIcons from '@/components/grid-icons'
 import FooterPrincipal from '@/components/footer-principal'
+import HeaderPrincipal from '@/components/header-principal'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,25 +19,19 @@ export default function Home() {
   return (
     <main className={` ${inter.className}`}>
       <Container justifyCenter>
-        <header className='text-center mb-10'>
-          <h1 className='text-primaryGreen text-5xl font-extrabold'>
-            Holovit Pureway-C Liposomal
-          </h1>
-          <h3 className='text-secondaryGrey text-2xl italic tracking-wide'>
-            Biodisponibilidad mejorada que aporta niveles óptimos de vitamina C
-          </h3>
-        </header>
-        <section className='grid grid-cols-2 place-content-between w-full  text-secondaryGrey'>
+        <HeaderPrincipal />
+        <section className='grid grid-cols-1 lg:grid-cols-2 place-content-between w-full  text-secondaryGrey'>
           <article className='relative flex flex-1 h-full flex-col justify-center items-center group'>
             <div className='w-1/5 relative'>
-              <span className='absolute -top-4 -left-10 z-10 rounded-full w-[55px] h-[55px] text-xl flex items-center justify-center text-white font-bold bg-accentBlue'>
+              <span className='absolute -top-4 -left-7 lg:-left-10 z-10 rounded-full h-[35px] w-[35px] lg:w-[55px] lg:h-[55px] text-xl flex items-center justify-center text-white font-bold bg-accentBlue'>
                 <div className='flex gap-0 flex-col items-center justify-center'>
-                  <span className='text-xl'>x {selectedItem.amount}</span>
-                  {/* <span className='text-sm'>x</span> */}
+                  <span className='text-sm lg:text-xl'>
+                    x {selectedItem.amount}
+                  </span>
                 </div>
               </span>
 
-              <div className='h-60 w-28 relative'>
+              <div className='h-40 lg:h-60 lg:w-28 relative'>
                 <Image
                   src={product.src}
                   alt='Picture of the author'
@@ -47,38 +42,40 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <h2 className='font-bold text-2xl text-accentBlue'>Beneficios</h2>
-              <article className='ml-5 mt-5'>
+              <h2 className='font-bold lg:text-2xl text-accentBlue px-5 lg:px-0'>
+                Beneficios
+              </h2>
+              <article className='ml-5 lg:mt-5'>
                 <ul className='mt-4 flex flex-col gap-2 '>
-                  <li className='flex items-center gap-2 text-pretty'>
-                    <span className='font-extrabold text-primaryGreen text-2xl'>
+                  <li className='flex items-center gap-2 text-pretty text-sm lg:text-xl'>
+                    <span className='font-extrabold text-primaryGreen  lg:text-2xl'>
                       ✓
                     </span>
                     Biodisponibilidad mejorada que aporta niveles óptimos de
                     vitamina C:
                   </li>
-                  <li className='flex items-center gap-2 text-pretty'>
-                    <span className='font-extrabold text-primaryGreen text-2xl'>
+                  <li className='flex items-center gap-2 text-pretty text-sm lg:text-xl'>
+                    <span className='font-extrabold text-primaryGreen  lg:text-2xl'>
                       ✓
                     </span>
                     La vitamina C es conocida por su capacidad para fortalecer
                     el sistema inmunológico.
                   </li>
-                  <li className='flex items-center gap-2 text-pretty'>
-                    <span className='font-extrabold text-primaryGreen text-2xl'>
+                  <li className='flex items-center gap-2 text-pretty text-sm lg:text-xl'>
+                    <span className='font-extrabold text-primaryGreen  lg:text-2xl'>
                       ✓
                     </span>
                     Ayuda a disminuir el cansancio y fatiga y a regenerar la
                     forma reducida de la vitamina E.
                   </li>
-                  <li className='flex items-center gap-2 text-pretty'>
-                    <span className='font-extrabold text-primaryGreen text-2xl'>
+                  <li className='flex items-center gap-2 text-pretty text-sm lg:text-xl'>
+                    <span className='font-extrabold text-primaryGreen  lg:text-2xl'>
                       ✓
                     </span>
                     Estimulación neuronal saludable.
                   </li>
-                  <li className='flex items-center gap-2 text-pretty'>
-                    <span className='font-extrabold text-primaryGreen text-2xl'>
+                  <li className='flex items-center gap-2 text-pretty text-sm lg:text-xl'>
+                    <span className='font-extrabold text-primaryGreen  lg:text-2xl'>
                       ✓
                     </span>
                     Contribuye a la formación de colágeno, que es esencial para
@@ -91,18 +88,18 @@ export default function Home() {
           </article>
           <article className='w-full h-full'>
             <BuyingButtons />
-            <div className='shadow-lg mt-5 shadow-accentBlue w-full'>
+            <div className='shadow-lg px-5 lg:px-0 mt-5 shadow-accentBlue w-full'>
               <DisplayPrice />
             </div>
           </article>
         </section>
       </Container>
 
-      <Container bgGradientInverted defaultHeight>
+      {/* <Container bgGradientInverted defaultHeight>
         <MoreInfo />
         <GridIcons />
       </Container>
-      <FooterPrincipal />
+      <FooterPrincipal /> */}
     </main>
   )
 }

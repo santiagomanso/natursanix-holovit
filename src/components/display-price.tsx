@@ -34,19 +34,23 @@ export default function DisplayPrice() {
   return (
     <>
       <header className='bg-accentBlue w-full text-center h-16 flex items-center justify-center'>
-        <h2 className='text-white text-4xl capitalize font-bold'>
+        <h2 className='text-white text-2xl lg:text-4xl capitalize font-bold'>
           ahorra {savedMoney}€
         </h2>
       </header>
       <div className='text-center py-4 w-full bg-white'>
-        <h3 className='text-xl'>
+        <h3 className='lg:text-xl'>
           {item.amount} unidades con un {formattedDiscount} de descuento
         </h3>
         <div className='flex flex-col gap-2'>
-          <p className='line-through text-2xl mt-4'>{item.originalPrice}€</p>
-          <p className='text-4xl font-medium text-accentRed'>{newPrice}€</p>
-          <p className='text-3xl'>Envío gratuito*</p>
-          <p className='text-3xl'>Envío express en 24 horas</p>
+          <p className='line-through text-xl lg:text-2xl mt-4'>
+            {item.originalPrice}€
+          </p>
+          <p className='text-3xl lg:text-4xl font-medium text-accentRed'>
+            {newPrice}€
+          </p>
+          <p className='text-xl lg:text-3xl'>Envío gratuito*</p>
+          <p className='text-xl lg:text-3xl'>Envío express en 24 horas</p>
         </div>
         <div className='flex items-center justify-center gap-4'>
           {/* <button

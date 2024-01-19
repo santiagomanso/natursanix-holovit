@@ -20,17 +20,17 @@ export function ModalComprar({ item }: Props) {
     <Dialog>
       <DialogTrigger asChild>
         <Button variant='submit' size='xl'>
-          Comprar c/ iframe
+          Comprar
         </Button>
       </DialogTrigger>
-      <DialogContent className='sm:max-w-[1000px]'>
+      <DialogContent className='max-w-screen sm:max-w-[1000px] p-0 lg:p-6'>
         <DialogHeader>
           <DialogTitle>Completar Pago</DialogTitle>
           {/* <DialogDescription>
             Rellene los campos del formulario para proceder con el pago
           </DialogDescription> */}
         </DialogHeader>
-        <div className='grid gap-4 py-4 w-[950px] h-[400px]'>
+        <div className='grid gap-4 py-4 w-[400px] lg:w-[950px] lg:h-[400px]'>
           <iframe
             className='w-full h-full'
             aria-label='Consigue Holovit PureWay-C Liposomal de Equisalud al mejor precio'
