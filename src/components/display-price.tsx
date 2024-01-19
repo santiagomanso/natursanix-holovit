@@ -18,10 +18,16 @@ export default function DisplayPrice() {
 
   const formattedDiscount = `${(item.discount * 100).toFixed(0)}%`
 
-  const newPrice = (
-    (item.originalPrice - item.originalPrice * item.discount) *
-    item.amount
-  ).toFixed(2)
+  //29.995
+  let newPrice =
+    (item.originalPrice - item.originalPrice * item.discount) * item.amount
+
+  function redondearA2Decimales(numero: number): number {
+    return Math.round(numero * 100) / 100
+  }
+
+  // const numeroConTresDecimales: number = newPrice
+  const price = redondearA2Decimales(newPrice)
 
   const savedMoney = (item.originalPrice * item.discount).toFixed(2)
 
@@ -47,7 +53,7 @@ export default function DisplayPrice() {
             {item.originalPrice}€
           </p>
           <p className='text-3xl lg:text-4xl font-medium text-accentRed'>
-            {newPrice}€
+            {price}€
           </p>
           <p className='text-xl lg:text-3xl'>Envío gratuito*</p>
           <p className='text-xl lg:text-3xl'>Envío express en 24 horas</p>
