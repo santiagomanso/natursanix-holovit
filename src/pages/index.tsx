@@ -20,7 +20,7 @@ export default function Home() {
     <main className={` ${inter.className}`}>
       <Container justifyCenter>
         <HeaderPrincipal />
-        <section className='grid grid-cols-1 lg:grid-cols-2 place-content-between w-full  text-secondaryGrey'>
+        <section className='grid grid-cols-1 lg:grid-cols-2 lg:gap-20 place-content-between w-full  text-secondaryGrey'>
           <article className='relative flex flex-1 h-full flex-col justify-center items-center group'>
             <div className='w-1/5 relative'>
               <span className='absolute -top-4 -left-7 lg:-left-10 z-10 rounded-full h-[35px] w-[35px] lg:w-[55px] lg:h-[55px] text-xl flex items-center justify-center text-white font-bold bg-accentBlue'>
