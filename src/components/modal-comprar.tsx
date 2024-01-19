@@ -30,7 +30,7 @@ export function ModalComprar({ item }: Props) {
             Rellene los campos del formulario para proceder con el pago
           </DialogDescription> */}
         </DialogHeader>
-        <div className='grid gap-4 py-4 w-[400px] lg:w-[950px] lg:h-[400px]'>
+        <div className='grid gap-4 py-4 w-[400px] h-[500px] lg:w-[950px] lg:h-[400px]'>
           <iframe
             className='w-full h-full'
             aria-label='Consigue Holovit PureWay-C Liposomal de Equisalud al mejor precio'
