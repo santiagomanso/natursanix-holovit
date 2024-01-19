@@ -95,11 +95,11 @@ export default function Home() {
         </section>
       </Container>
 
-      {/* <Container bgGradientInverted defaultHeight>
+      <Container bgGradientInverted defaultHeight>
         <MoreInfo />
         <GridIcons />
       </Container>
-      <FooterPrincipal /> */}
+      <FooterPrincipal />
     </main>
   )
 }

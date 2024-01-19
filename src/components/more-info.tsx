@@ -15,7 +15,7 @@ export function MoreInfo() {
   return (
     <Accordion type='single' collapsible className='w-full'>
       <AccordionItem value='item-1'>
-        <AccordionTrigger>Mas información</AccordionTrigger>
+        <AccordionTrigger>Descripción</AccordionTrigger>
         <AccordionContent className='w-full '>
           <p>
             Holovit PureWay-C Liposomal se basa en una forma avanzada de

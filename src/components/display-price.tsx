@@ -22,14 +22,16 @@ export default function DisplayPrice() {
   let newPrice =
     (item.originalPrice - item.originalPrice * item.discount) * item.amount
 
-  function redondearA2Decimales(numero: number): number {
+  function roundTo2Decimals(numero: number): number {
     return Math.round(numero * 100) / 100
   }
 
   // const numeroConTresDecimales: number = newPrice
-  const price = redondearA2Decimales(newPrice)
+  const price = roundTo2Decimals(newPrice)
 
-  const savedMoney = (item.originalPrice * item.discount).toFixed(2)
+  const savedMoney = (
+    roundTo2Decimals(item.originalPrice * item.amount) - price
+  ).toFixed(2)
 
   // const handleNavigation = (item: Item) => {
   //   const url =
@@ -50,7 +52,7 @@ export default function DisplayPrice() {
         </h3>
         <div className='flex flex-col gap-2'>
           <p className='line-through text-xl lg:text-2xl mt-4'>
-            {item.originalPrice}€
+            {roundTo2Decimals(item.originalPrice * item.amount).toFixed(2)}€
           </p>
           <p className='text-3xl lg:text-4xl font-medium text-accentRed'>
             {price}€
