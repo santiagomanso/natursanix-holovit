@@ -1,5 +1,8 @@
 import { ItemsContext } from '@/context/items-context'
 import { useContext } from 'react'
+import { ModalComprar } from './modal-comprar'
+import FooterPagos from './footer-pagos'
+import { Item } from '@/types/interfaces'
 
 interface Props {
   item: {
@@ -16,11 +19,17 @@ export default function DisplayPrice() {
   const formattedDiscount = `${(item.discount * 100).toFixed(0)}%`
 
   const newPrice = (
-    item.originalPrice -
-    item.originalPrice * item.discount
+    (item.originalPrice - item.originalPrice * item.discount) *
+    item.amount
   ).toFixed(2)
 
   const savedMoney = (item.originalPrice * item.discount).toFixed(2)
+
+  // const handleNavigation = (item: Item) => {
+  //   const url =
+  //     'https://forms.zohopublic.eu/univerlifenatursanix/form/Pagolanding/formperma/IGIeJakmYJyR_zzgIRGG9GncBB0h8Nw4opVymAvw7wA?aux_op=1+unidad+con+un+10%25+de+descuento+-+26.96%E2%82%AC'
+  //   window.open(url, '_blank')
+  // }
 
   return (
     <>
@@ -39,9 +48,16 @@ export default function DisplayPrice() {
           <p className='text-3xl'>Envío gratuito*</p>
           <p className='text-3xl'>Envío express en 24 horas</p>
         </div>
-        <button className='border-2 border-primaryGreen px-10 py-2 mt-7 font-bold text-2xl'>
-          comprar
-        </button>
+        <div className='flex items-center justify-center gap-4'>
+          {/* <button
+            onClick={() => handleNavigation(item)}
+            className='border-2 rounded-md border-primaryGreen px-10 py-2 mt-7 font-bold text-2xl shadow-md  hover:shadow-primaryGreen'
+          >
+            Comprar c/ link
+          </button> */}
+          <ModalComprar item={item} />
+        </div>
+        <FooterPagos />
       </div>
     </>
   )

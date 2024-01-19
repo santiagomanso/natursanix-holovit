@@ -18,8 +18,13 @@ export default function BuyingButtons() {
         return (
           <div key={item.id}>
             <button
-              className={`bg-white text-primaryGreen border-2  border-primaryGreen hover:bg-primaryGreen text-xl font-bold flex flex-col items-center hover:text-white p-2 transition-all duration-75 active:translate-y-1 hover:shadow-md hover:shadow-green-950 relative rounded-md`}
-              onClick={() => handleChangeItem(item.amount, item.discount)}
+              className={` border-2  border-primaryGreen hover:bg-primaryGreen text-xl font-bold flex flex-col items-center hover:text-white p-2 transition-all duration-75 active:translate-y-1 hover:shadow-md hover:shadow-green-950 relative rounded-md
+              ${
+                isSelected(item)
+                  ? 'bg-primaryGreen text-white shadow-md shadow-green-950'
+                  : 'bg-white text-primaryGreen'
+              }`}
+              onClick={() => handleChangeItem(item)}
             >
               {item.bestOffer && (
                 <span className='absolute pointer-events-none -top-7 text-sm text-accentRed'>

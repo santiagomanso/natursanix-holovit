@@ -7,6 +7,8 @@ import BuyingButtons from '@/components/buying-buttons'
 import { ItemsContext } from '@/context/items-context'
 import Container from '@/components/container'
 import { MoreInfo } from '@/components/more-info'
+import GridIcons from '@/components/grid-icons'
+import FooterPrincipal from '@/components/footer-principal'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -89,16 +91,18 @@ export default function Home() {
           </article>
           <article className='w-full h-full'>
             <BuyingButtons />
-            <div className='shadow-lg shadow-accentBlue w-full'>
+            <div className='shadow-lg mt-5 shadow-accentBlue w-full'>
               <DisplayPrice />
             </div>
           </article>
         </section>
       </Container>
 
-      <Container bgGradientInverted>
+      <Container bgGradientInverted defaultHeight>
         <MoreInfo />
+        <GridIcons />
       </Container>
+      <FooterPrincipal />
     </main>
   )
 }
