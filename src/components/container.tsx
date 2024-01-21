@@ -27,7 +27,11 @@ export default function Container({
       
       `}
     >
-      <div className={`w-full max-w-7xl mx-auto ${defaultHeight && ''}`}>
+      <div
+        className={`w-full max-w-7xl mx-auto scale-100 md:scale-[.85] ${
+          defaultHeight && ''
+        }`}
+      >
         {children}
       </div>
     </section>
