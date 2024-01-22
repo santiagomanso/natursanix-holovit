@@ -4,7 +4,7 @@ interface Props {
   justifyCenter?: boolean
   justifyStart?: boolean
   justifyEnd?: boolean
-  defaultHeight?: boolean
+  opt?: string
 }
 
 export default function Container({
@@ -13,13 +13,11 @@ export default function Container({
   justifyCenter,
   justifyEnd,
   justifyStart,
-  defaultHeight,
+  opt,
 }: Props) {
   return (
     <section
-      className={`${
-        defaultHeight ? '' : 'min-h-screen'
-      } w-full from-green-100 via-white to-white flex flex-col 
+      className={`w-full from-green-100 via-white to-white flex flex-col 
       ${bgGradientInverted ? 'bg-gradient-to-tl' : 'bg-gradient-to-bl'}
       ${justifyCenter && 'justify-center'}
       ${justifyStart && 'justify-start'}
@@ -29,7 +27,7 @@ export default function Container({
     >
       <div
         className={`w-full max-w-7xl mx-auto scale-100 md:scale-[.85] ${
-          defaultHeight && ''
+          opt && opt
         }`}
       >
         {children}

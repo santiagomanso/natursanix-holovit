@@ -31,7 +31,7 @@ export default function Home() {
                 </div>
               </span>
 
-              <div className='h-40 lg:h-60 lg:w-28 relative'>
+              <div className='h-48 md:h-72 md:w-32 lg:h-60 lg:w-28 relative'>
                 <Image
                   src={product.src}
                   alt='Picture of the author'
@@ -86,16 +86,16 @@ export default function Home() {
               </article>
             </div>
           </article>
-          <article className='w-full h-full'>
+          <article className='w-full h-full mb-10 lg:mb-0'>
             <BuyingButtons />
-            <div className='shadow-lg px-5 lg:px-0 mt-5 shadow-accentBlue w-full'>
+            <div className='shadow-lg  mx-auto max-w-[400px] md:max-w-full lg:px-0 mt-5 shadow-accentBlue w-full'>
               <DisplayPrice />
             </div>
           </article>
         </section>
       </Container>
 
-      <Container bgGradientInverted defaultHeight>
+      <Container bgGradientInverted opt='px-5 lg:px-0'>
         <MoreInfo />
         <GridIcons />
       </Container>
