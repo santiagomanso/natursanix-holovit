@@ -23,9 +23,9 @@ export function MoreInfo() {
             durante mas tiempo debido a su estructura liposomada, potenciando
             aún más los beneficios que nos aporta esta vitamina.
           </p>
-          <section className='grid grid-cols-4 w-full gap-10 text-pretty'>
-            <article className='flex flex-col items-center gap-2 justify-start'>
-              <div className='h-60 w-52 relative'>
+          <section className='grid mt-5 lg:mt-0 grid-cols-1 lg:grid-cols-4 w-full gap-10 text-pretty'>
+            <article className='flex flex-col items-center gap-2 justify-start text-center px-5 lg:px-0'>
+              <div className='h-24 w-24 lg:h-60 lg:w-52 relative'>
                 <Image
                   src={img_vitamin.src}
                   alt='Picture of the author'
@@ -39,8 +39,8 @@ export function MoreInfo() {
                 sistema inmunológico
               </p>
             </article>
-            <article className='flex flex-col items-center gap-2 justify-start'>
-              <div className='h-60 w-52 relative'>
+            <article className='flex flex-col items-center gap-2 justify-start text-center px-5 lg:px-0'>
+              <div className='h-24 w-24 lg:h-60 lg:w-52 relative'>
                 <Image
                   src={img_run.src}
                   alt='Picture of the author'
@@ -54,8 +54,8 @@ export function MoreInfo() {
                 reducida de la vitamina E
               </p>
             </article>
-            <article className='flex flex-col items-center gap-2 justify-start'>
-              <div className='h-60 w-52 relative'>
+            <article className='flex flex-col items-center gap-2 justify-start text-center px-5 lg:px-0'>
+              <div className='h-24 w-24 lg:h-60 lg:w-52 relative'>
                 <Image
                   src={img_brain.src}
                   alt='Picture of the author'
@@ -69,8 +69,8 @@ export function MoreInfo() {
                 sistema inmunológico
               </p>
             </article>
-            <article className='flex flex-col items-center gap-2 justify-start'>
-              <div className='h-60 w-52 relative'>
+            <article className='flex flex-col items-center gap-2 justify-start text-center px-5 lg:px-0'>
+              <div className='h-24 w-24 lg:h-60 lg:w-52 relative'>
                 <Image
                   src={img_hair.src}
                   alt='Picture of the author'
