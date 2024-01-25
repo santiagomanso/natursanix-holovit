@@ -19,8 +19,10 @@ const Home: NextPage = () => {
   const { selectedItem } = useContext(ItemsContext)
 
   return (
-    <Head>
-      <title>Natursanix - Holovit Liposomal Pureway</title>
+    <>
+      <Head>
+        <title>Natursanix - Holovit Liposomal Pureway</title>
+      </Head>
       <meta
         name='description'
         content='Conoce el nuevo Holovit Liposomal Pureway, con su presentacion en 3 unidades tienes un 15% de descuento! consíguelo ahora!'
@@ -152,7 +154,7 @@ const Home: NextPage = () => {
         </Container>
         <FooterPrincipal />
       </main>
-    </Head>
+    </>
   )
 }
 
