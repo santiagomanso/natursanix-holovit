@@ -19,7 +19,7 @@ export default function FooterPagos() {
             transform='translate(49 390)'
             fill='#fff'
             stroke='#023859'
-            stroke-width='1'
+            strokeWidth='1'
           ></path>
           <g
             id='Group_587'
@@ -80,7 +80,7 @@ export default function FooterPagos() {
             d='M4,0H44a4,4,0,0,1,4,4V28a4,4,0,0,1-4,4H4a4,4,0,0,1-4-4V4A4,4,0,0,1,4,0Z'
             fill='#fff'
             stroke='#023859'
-            stroke-width='1'
+            strokeWidth='1'
           ></path>
           <rect
             id='Rectangle'
@@ -129,7 +129,7 @@ export default function FooterPagos() {
             transform='translate(204.927 390)'
             fill='#fff'
             stroke='#023859'
-            stroke-width='1'
+            strokeWidth='1'
           ></path>
           <path
             id='Path_76'
@@ -176,7 +176,7 @@ export default function FooterPagos() {
         viewBox='0 0 45.498 33'
       >
         <defs>
-          <clipPath id='clip-path'>
+          <clipPath id='clipPath'>
             <path
               id='Path_878'
               data-name='Path 878'
@@ -185,7 +185,7 @@ export default function FooterPagos() {
               fill='none'
             ></path>
           </clipPath>
-          <clipPath id='clip-path-2'>
+          <clipPath id='clipPath-2'>
             <rect
               id='Rectangle_1499'
               data-name='Rectangle 1499'
@@ -210,7 +210,7 @@ export default function FooterPagos() {
               d='M3.708,0H40.79A3.862,3.862,0,0,1,44.5,4V28a3.862,3.862,0,0,1-3.708,4H3.708A3.862,3.862,0,0,1,0,28V4A3.862,3.862,0,0,1,3.708,0Z'
               fill='#fff'
               stroke='#023859'
-              stroke-width='1'
+              strokeWidth='1'
             ></path>
           </g>
           <g
@@ -227,20 +227,20 @@ export default function FooterPagos() {
                 id='Group_834'
                 data-name='Group 834'
                 transform='translate(0 0)'
-                clip-path='url(#clip-path)'
+                clipPath='url(#clipPath)'
               >
                 <g id='Group_833' data-name='Group 833'>
                   <g id='Group_832' data-name='Group 832'>
                     <g
                       id='Group_831'
                       data-name='Group 831'
-                      clip-path='url(#clip-path-2)'
+                      clipPath='url(#clipPath-2)'
                     >
                       <g id='Group_830' data-name='Group 830'>
                         <g
                           id='Group_829'
                           data-name='Group 829'
-                          clip-path='url(#clip-path-2)'
+                          clipPath='url(#clipPath-2)'
                         >
                           <image
                             id='Rectangle_1497'

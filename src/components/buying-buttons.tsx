@@ -6,7 +6,7 @@ import { useContext } from 'react'
 export default function BuyingButtons() {
   const { selectedItem, handleChangeItem } = useContext(ItemsContext)
 
-  console.log('selectedItem', selectedItem)
+  // console.log('selectedItem', selectedItem)
 
   const isSelected = (item: Item) => {
     return selectedItem.id === item.id
